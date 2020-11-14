@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!---->
+<br><br><br><br>
+<div class="container">
+   <form class="col s12" method="post">
+         
+     
+   {% csrf_token %}
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <!-- Default form register -->
+<form class="text-center border border-light p-5" action="#!">
+
+   <p class="h4 mb-4">Sign up</p>
+
+   <div class="form-row mb-4">
+       <div class="col">
+           <!-- First name -->
+           <input type="text" id="defaultRegisterFormFirstName" class="form-control" name="first_name" placeholder="First name" required>
+       </div>
+       <div class="col">
+           <!-- Last name -->
+           <input type="text" id="defaultRegisterFormLastName" class="form-control" name="last_name" placeholder="Last name" required>
+       </div>
+   </div>
+ <!-- E-mail -->
+ <input type="text" id="defaultRegisterFormUsername" class="form-control mb-4" name="username" placeholder="Username" required>
+
+   <!-- E-mail -->
+   <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" name="email" placeholder="E-mail" required>
+
+   <!-- Password -->
+   <input type="password" id="defaultRegisterFormPassword" class="form-control"  name="password1" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock" required>
+   <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+       At least 8 characters and 1 digit
+   </small> 
+   <input type="password" id="defaultRegisterFormPassword" class="form-control"  name="password2" placeholder="Confirm Password" aria-describedby="defaultRegisterFormPasswordHelpBlock" required>
+   <br>
+ 
+   <!-- Sign up button -->
+   <button class="btn btn-info my-4 btn-block" type="submit">Sign in</button>
+   </form>
+
+   <!-- Social register -->
+   <p>or sign up with:</p>
+
+   <a href="#" class="mx-2" role="button"><i class="fab fa-facebook-f light-blue-text"></i></a>
+   <a href="#" class="mx-2" role="button"><i class="fab fa-twitter light-blue-text"></i></a>
+   <a href="#" class="mx-2" role="button"><i class="fab fa-linkedin-in light-blue-text"></i></a>
+   <a href="#" class="mx-2" role="button"><i class="fab fa-github light-blue-text"></i></a>
+
+   <hr>
+
+   <!-- Terms of service -->
+   <p>By clicking
+       <em>Sign up</em> you agree to our
+       <a href="" target="_blank">terms of service</a>
+
+</form>
+<p>
+   Already have an account ? <a href="{% url 'login' %}">Sing In</a></p>
+<!-- Default form register -->
+    <div class="col-md-3"></div>
+  </div>
+</div>
+</div>
+{% endblock content %}
