@@ -23,7 +23,7 @@ from User import views as user_views
 from django.conf import settings
 from django.conf.urls.static import static
 
-admin.site.site_header = "Inovation Club"
+admin.site.site_header = "Karu Innovation Club Admin "
 
 urlpatterns = [
     path('admin/', admin.site.urls),
