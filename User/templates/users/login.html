@@ -4,54 +4,21 @@
 <div class="container">
   <div class="row">
     <div class="col-md-3"></div>
-    <div class="col-md-6">
-     <!-- Default form login -->
-<form class="text-center border border-light p-5" method="post" action="login">
- {% csrf_token %}
-     
-    <p class="h4 mb-4">Sign in</p>
-     
-    <!-- Email -->
-    <input type="email" name="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+    <div>
+   <form method="post">
+     {% csrf_token %}
+     <fieldset >
+       <legend>Log In</legend>
+        
+     {{form.as_p}}
+     </fieldset>
+      
+      <button type= "Submit" > Log In</button>      </div>
+   </form>
 
-    <!-- Password -->
-    <input type="password" name= "password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
+     <small>Need An Account? <a href = " {% url 'register' %} ">Sign Up</a> </small>
 
-    <div class="d-flex justify-content-around">
-        <div>
-            <!-- Remember me -->
-            <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
-                <label class="custom-control-label" for="defaultLoginFormRemember">Remember me</label>
-            </div>
-        </div>
-        <div>
-            <!-- Forgot password -->
-            <a href="">Forgot password?</a>
-        </div>
-    </div>
-
-    <!-- Sign in button -->
-    
-    <button class="btn btn-info btn-block my-4" type="submit">Sign in</button>
-     
-    <!-- Register -->
-    <p>Not a member?
-        <a href="{% url 'register' %}">Register</a>
-    </p>
-
-    <!-- Social login -->
-    <p>or sign in with:</p>
-
-    <a href="#" class="mx-2" role="button"><i class="fab fa-facebook-f light-blue-text"></i></a>
-    <a href="#" class="mx-2" role="button"><i class="fab fa-twitter light-blue-text"></i></a>
-    <a href="#" class="mx-2" role="button"><i class="fab fa-linkedin-in light-blue-text"></i></a>
-    <a href="#" class="mx-2" role="button"><i class="fab fa-github light-blue-text"></i></a>
-
-</form>
-
-<!-- Default form login -->
-    </div>
+</div>
     <div class="col-md-3"></div>
   </div>
 </div>

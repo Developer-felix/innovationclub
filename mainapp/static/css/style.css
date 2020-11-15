@@ -1,4 +1,5 @@
 /* Required height of parents of the Half Page Carousel for proper displaying carousel itself */
+
 html,
 body,
 .view {
@@ -21,10 +22,12 @@ body,
 /* Navbar animation */
 /* */
 .navbar {
-  background-color: rgba(248, 248, 248, 0.2);}
+  background-color: rgba(248, 248, 248, 0.2);
+  }
+
 
 .top-nav-collapse {
-  background-color: #929FBA; }
+  background-color:#929FBA; }
 
 /* Adding color to the Navbar on mobile */
 @media only screen and (max-width: 768px) {

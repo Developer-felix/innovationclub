@@ -7,6 +7,11 @@ from .forms import UserRegisterForm,UserUpdateForm,ProfileUpdateForm
 from django.contrib.auth.models import User
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
+from django.utils.decorators import method_decorator
+from django.contrib.auth.decorators import login_required
+from django.views.generic import View
+from django.shortcuts import redirect
+
 def register(request):
     if request.method == "POST":
         

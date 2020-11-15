@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
    
     <!--Carousel Wrapper-->
@@ -53,7 +54,7 @@
 
         <!--Second slide-->
         <div class="carousel-item">
-          <div class="view" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/77.jpg'); background-repeat: no-repeat; background-size: cover;">
+          <div class="view " style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/77.jpg'); background-repeat: no-repeat; background-size: cover;">
 
             <!-- Mask & flexbox options-->
             <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
@@ -153,7 +154,7 @@
           <!--Grid column-->
           <div class="col-md-6 mb-4">
 
-            <img src="https://mdbootstrap.com/img/Marketing/mdb-press-pack/mdb-main.jpg" class="img-fluid z-depth-1-half"
+            <img src="https://mdbootstrap.com/img/Marketing/mdb-press-pack/mdb-main.jpg" class="img-fluid z-depth-1-half animated swing infinite delay-2s slower "
               alt="">
 
           </div>
@@ -168,8 +169,7 @@
                 beginners to experts in offering technology solutions 
                 and turning their technology ideas into enterprenuership 
                 startups following the business model.</p>
-            <p>This template is created with Material Design for Bootstrap (
-              <strong>MDB</strong> ) framework.</p>
+            </p>
             
             <!-- Main heading -->
 
@@ -210,7 +210,7 @@
 
     <!-- Card image -->
     <div class="view view-cascade overlay">
-      <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/men.jpg" alt="Card image cap">
+      <img class="card-img-top" src="{% static 'images/innovhome.jpg' %}" alt="Card image cap">
       <a>
         <div class="mask rgba-white-slight"></div>
       </a>
@@ -294,7 +294,7 @@
 
     <!-- Card image -->
     <div class="view view-cascade overlay">
-      <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/men.jpg" alt="Card image cap">
+      <img class="card-img-top" src="{% static 'images/innovhome.jpg' %}" alt="Card image cap">
       <a>
         <div class="mask rgba-white-slight"></div>
       </a>
