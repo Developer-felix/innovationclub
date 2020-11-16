@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-   
+  
     <!--Carousel Wrapper-->
     <div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
 
@@ -15,10 +15,11 @@
 
       <!--Slides-->
       <div class="carousel-inner" role="listbox">
-
+        
         <!--First slide-->
         <div class="carousel-item active">
-          <div class="view" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/nature7.jpg'); background-repeat: no-repeat; background-size: cover;">
+        <!--https://mdbootstrap.com/img/Photos/Others/nature7.jpg-->
+          <div class="view" style="background-image: url('{% static 'img/home1.jpg' %}'); background-repeat: no-repeat; background-size: cover;">
 
             <!-- Mask & flexbox options-->
             <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
@@ -39,7 +40,7 @@
                     available. Build your skills here.</strong>
                 </p>
 
-                <a target="_blank" href="https://mdbootstrap.com/education/bootstrap/" class="btn btn-outline-white btn-lg">Join Us Today
+                <a target="_blank" href="{% url "register" %}" class="btn btn-outline-white btn-lg">Join Us Today
                   <i class="fas fa-graduation-cap ml-2"></i>
                 </a>
               </div>
@@ -52,9 +53,11 @@
         </div>
         <!--/First slide-->
 
+
         <!--Second slide-->
         <div class="carousel-item">
-          <div class="view " style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/77.jpg'); background-repeat: no-repeat; background-size: cover;">
+        <!--https://mdbootstrap.com/img/Photos/Others/images/77.jpg-->
+          <div class="view " style="background-image: url('{% static 'img/home2.jpg' %}'); background-repeat: no-repeat; background-size: cover;">
 
             <!-- Mask & flexbox options-->
             <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
@@ -75,7 +78,7 @@
                     available. Build your skills here.</strong>
                 </p>
 
-                <a target="_blank" href="https://mdbootstrap.com/education/bootstrap/" class="btn btn-outline-white btn-lg">Join Us Today
+                <a target="_blank" href="{% url "register" %}" class="btn btn-outline-white btn-lg">Join Us Today
                   <i class="fas fa-graduation-cap ml-2"></i>
                 </a>
               </div>
@@ -90,7 +93,7 @@
 
         <!--Third slide-->
         <div class="carousel-item">
-          <div class="view" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/47.jpg'); background-repeat: no-repeat; background-size: cover;">
+          <div class="view" style="background-image: url('{% static 'img/home3.jpg' %}'); background-repeat: no-repeat; background-size: cover;">
 
             <!-- Mask & flexbox options-->
             <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
@@ -113,7 +116,7 @@
                     available. Build your skills here.</strong>
                 </p>
 
-                <a target="_blank" href="https://mdbootstrap.com/education/bootstrap/" class="btn btn-outline-white btn-lg">Join Us Today
+                <a target="_blank" href="{% url "register" %}" class="btn btn-outline-white btn-lg">Join Us Today
                   <i class="fas fa-graduation-cap ml-2"></i>
                 </a>
               </div>
@@ -154,7 +157,7 @@
           <!--Grid column-->
           <div class="col-md-6 mb-4">
 
-            <img src="{% static 'goals.webp'%}" class="img-fluid z-depth-1-half animated swing infinite delay-2s slower "
+            <img src="{% static 'img/goals.png'%}" class="img-fluid z-depth-1-half animated swing infinite delay-2s slower "
               alt="">
 
           </div>
@@ -184,10 +187,10 @@
         -->
 
             <!-- CTA -->
-            <a target="_blank" href="https://mdbootstrap.com/docs/jquery/getting-started/download/" class="btn btn-grey btn-md">Our Communities 
+            <a target="_blank" href="" class="btn btn-grey btn-md">Our Communities 
                 <i class="fas fa-american-sign-language-interpreting"></i>
             </a>
-            <a target="_blank" href="https://mdbootstrap.com/docs/jquery/components/" class="btn btn-grey btn-md">Our Products 
+            <a target="_blank" href="{% url 'community-list' %}" class="btn btn-grey btn-md">Our Products 
                 <i class="fas fa-award"></i>
             </a>
 
@@ -222,7 +225,7 @@
       <!-- Title -->
       <h4 class="card-title"><strong>FREE TECHNICAL SUPPORT</strong></h4>
       <!-- Subtitle -->
-      <h6 class="font-weight-bold indigo-text py-2">Web developer</h6>
+      <h6 class="font-weight-bold indigo-text py-2"></h6>
       <!-- Text -->
       <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, ex, recusandae.
         Facere modi sunt, quod quibusdam.
@@ -264,7 +267,7 @@
       <!-- Title -->
       <h4 class="card-title"><strong>SHOP AND SELL WITH ALLCOMARDES</strong></h4>
       <!-- Subtitle -->
-      <h6 class="font-weight-bold indigo-text py-2">Web developer</h6>
+      <h6 class="font-weight-bold indigo-text py-2"></h6>
       <!-- Text -->
       <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, ex, recusandae.
         Facere modi sunt, quod quibusdam.
@@ -306,7 +309,7 @@
       <!-- Title -->
       <h4 class="card-title"><strong>PRACTICAL CODING SESSION</strong></h4>
       <!-- Subtitle -->
-      <h6 class="font-weight-bold indigo-text py-2">Web developer</h6>
+      <h6 class="font-weight-bold indigo-text py-2"></h6>
       <!-- Text -->
       <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, ex, recusandae.
         Facere modi sunt, quod quibusdam.
@@ -373,7 +376,7 @@
       <!--Grid column-->
       <div class="col-md-6 mb-4">
 
-        <img src="https://mdbootstrap.com/img/Marketing/mdb-press-pack/mdb-main.jpg" class="img-fluid z-depth-1-half"
+        <img src="{% static 'img/technicalses.jpg' %}" class="img-fluid z-depth-1-half"
           alt="">
 
       </div>

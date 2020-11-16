@@ -66,7 +66,7 @@
 
 <!--mdb-color darken-3-->
     <!-- Navbar -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar  primary "  >
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar  primary"  >
       <div class="container">
         <!-- Brand -->
         <a class="navbar-brand" href="{% url 'home-page' %}" target="_blank">
@@ -75,14 +75,15 @@
       <!-- Logo Text -->
           <strong>Innovation Club</strong>
         </a>
+         
 
         <!-- Collapse -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#basicExampleNav"
         aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
         <!-- Links -->
-        <div class="collapse navbar-collapse" id="basicExampleNav">
+        <div class="collapse navbar-collapse navbar-dark scrolling-navbar  primary" id="basicExampleNav">
 
           <!-- Left -->
           <ul class="navbar-nav mr-auto">
@@ -92,7 +93,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'home-page' %}" target="_blank">About</a>
+              <a class="nav-link" href="{% url 'about-page' %}" target="_blank">About</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{% url 'contact-page' %}" target="_blank">Contact</a>
@@ -107,6 +108,11 @@
             <li class="nav-item">
               <a href="" class="nav-link" target="_blank">
                 <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="" class="nav-link" target="_blank">
+                <form action={% url 'cmsearch-page' %} method='get'>
+                
+                </form>
               </a>
             </li>
             <li class="nav-item">
@@ -149,7 +155,7 @@
      <!--Main Layout-->
      
       <!--Footer-->
-  <footer class="page-footer text-center font-small mt-4 wow fadeIn  primary darcken-5">
+  <footer class="page-footer text-center font-small mt-4 wow fadeIn  black darcken-5">
 
     <!--Call to action-->
     <div class="pt-4">
@@ -168,35 +174,35 @@
 
     <!-- Social icons -->
     <div class="pb-4">
-      <a href="https://www.facebook.com/mdbootstrap" target="_blank">
+      <a href="" target="_blank">
         <i class="fab fa-facebook-f mr-3"></i>
       </a>
 
-      <a href="https://twitter.com/MDBootstrap" target="_blank">
+      <a href="" target="_blank">
         <i class="fab fa-twitter mr-3"></i>
       </a>
 
-      <a href="https://www.youtube.com/watch?v=7MUISDJ5ZZ4" target="_blank">
+      <a href="" target="_blank">
         <i class="fab fa-youtube mr-3"></i>
       </a>
 
-      <a href="https://plus.google.com/u/0/b/107863090883699620484" target="_blank">
+      <a href="" target="_blank">
         <i class="fab fa-google-plus-g mr-3"></i>
       </a>
 
-      <a href="https://dribbble.com/mdbootstrap" target="_blank">
+      <a href="" target="_blank">
         <i class="fab fa-dribbble mr-3"></i>
       </a>
 
-      <a href="https://pinterest.com/mdbootstrap" target="_blank">
+      <a href="" target="_blank">
         <i class="fab fa-pinterest mr-3"></i>
       </a>
 
-      <a href="https://github.com/mdbootstrap/bootstrap-material-design" target="_blank">
+      <a href="" target="_blank">
         <i class="fab fa-github mr-3"></i>
       </a>
 
-      <a href="http://codepen.io/mdbootstrap/" target="_blank">
+      <a href="" target="_blank">
         <i class="fab fa-codepen mr-3"></i>
       </a>
     </div>

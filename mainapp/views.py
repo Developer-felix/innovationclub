@@ -9,12 +9,22 @@ def home(request):
     return render(request,'home.html')
 
 def contact(request):
-    return render(request,'contact.html')   
+    return render(request,'contact.html') 
+
+def about(request):
+    return render(request,'about.html')  
 
 class CommunityListView(ListView): 
     model = Community
     template_name = "Comunity/listcomunity.html"
     paginate_by = 8
+
+
+def comsearch(request):
+    if request.method == 'GET':
+        search = request.GET.get('search')
+        post = Community.objects.all().filter(name=search)
+        return render(request,'comsearch.html',{'post':post})
 
 class CommunityDetailView(DetailView):
     model = Community
