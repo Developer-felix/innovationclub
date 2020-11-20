@@ -1,0 +1,30 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<div class="container">
+<div class ="row">  
+     
+     <div class="col s12 m8">
+
+         <div >
+       <form method="post" enctype="multipart/form-data">>
+     {% csrf_token %}
+     
+   
+       <legend class="green-text">Delete Item</legend>
+        
+     <h2>Are you sure you want to delete the post{{posts.title}}</h2>
+     
+   
+      <button   class="red btn waves-effect wave-light danger" type= "Submit" > Yes, Delete </button>      
+      <a href="{% url 'market_detail' posts.id %}" > Cancel </a>      </div>
+   </form>
+</div>
+
+</div>
+</div>
+
+
+
+ 
+{% endblock content %}
+

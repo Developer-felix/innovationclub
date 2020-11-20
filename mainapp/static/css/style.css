@@ -29,7 +29,7 @@ body,
 .top-nav-collapse {
   background-color:#929FBA; }
 
-/* Adding color to the Navbar on mobile #c5d5f7 */
+/*" Adding color to the Navbar on mobile #c5d5f7 */
 @media only screen and (max-width: 768px) {
   .navbar {
     background-color: #1C2331 ;

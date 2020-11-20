@@ -1,4 +1,22 @@
 {% extends 'base.html' %}
 {% block content %}
-sech
+<br><br><br><br>
+{% if post %}
+
+
+SEACH RESULTS FOUND
+   {% for i  in post %}
+    <a href = "{% url "community-list" %}{{i.slug}}">{{i.name}}-{{i.image.url}}</a>
+     <div class="view overlay">
+                <img src="{{i.image.url}}"  class="card-img-top"
+                  alt="">
+                  <a href="{{i.get_absolute_url}}" >
+                
+                  <div class="mask rgba-white-slight"></div>
+                </a>
+              </div>
+   {% endfor %}
+{% else %}
+         <h1>Noting found</h1>
+{% endif %}
 {% endblock content %}

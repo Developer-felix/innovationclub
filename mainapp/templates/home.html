@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-  
+
     <!--Carousel Wrapper-->
     <div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
 
@@ -15,11 +15,10 @@
 
       <!--Slides-->
       <div class="carousel-inner" role="listbox">
-        
+
         <!--First slide-->
         <div class="carousel-item active">
-        <!--https://mdbootstrap.com/img/Photos/Others/nature7.jpg-->
-          <div class="view" style="background-image: url('{% static 'img/home1.jpg' %}'); background-repeat: no-repeat; background-size: cover;">
+          <div class="view" style="background-image: url('{% static "images/home1.jpg" %}'); background-repeat: no-repeat; background-size: cover;">
 
             <!-- Mask & flexbox options-->
             <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
@@ -40,7 +39,7 @@
                     available. Build your skills here.</strong>
                 </p>
 
-                <a target="_blank" href="{% url "register" %}" class="btn btn-outline-white btn-lg">Join Us Today
+                <a target="_blank" href="#" class="btn btn-outline-white btn-lg">Join Us Today
                   <i class="fas fa-graduation-cap ml-2"></i>
                 </a>
               </div>
@@ -56,8 +55,7 @@
 
         <!--Second slide-->
         <div class="carousel-item">
-        <!--https://mdbootstrap.com/img/Photos/Others/images/77.jpg-->
-          <div class="view " style="background-image: url('{% static 'img/home2.jpg' %}'); background-repeat: no-repeat; background-size: cover;">
+          <div class="view " style="background-image: url('{% static "images/home2.jpg" %}'); background-repeat: no-repeat; background-size: cover;">
 
             <!-- Mask & flexbox options-->
             <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
@@ -78,7 +76,7 @@
                     available. Build your skills here.</strong>
                 </p>
 
-                <a target="_blank" href="{% url "register" %}" class="btn btn-outline-white btn-lg">Join Us Today
+                <a target="_blank" href="#" class="btn btn-outline-white btn-lg">Join Us Today
                   <i class="fas fa-graduation-cap ml-2"></i>
                 </a>
               </div>
@@ -93,7 +91,7 @@
 
         <!--Third slide-->
         <div class="carousel-item">
-          <div class="view" style="background-image: url('{% static 'img/home3.jpg' %}'); background-repeat: no-repeat; background-size: cover;">
+          <div class="view" style="background-image: url('{% static "images/home3.jpg" %}'); background-repeat: no-repeat; background-size: cover;">
 
             <!-- Mask & flexbox options-->
             <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
@@ -102,12 +100,12 @@
               <div class="text-center white-text mx-5 wow fadeIn">
                 <h1 class="mb-4">
                   <strong>Karatina University Innovation Club</strong>
-                  
+
                 </h1>
 
                 <p>
                   <strong>Best place for your Tech startup </strong>
-        
+
                 </p>
 
                 <p class="mb-4 d-none d-md-block">
@@ -116,7 +114,7 @@
                     available. Build your skills here.</strong>
                 </p>
 
-                <a target="_blank" href="{% url "register" %}" class="btn btn-outline-white btn-lg">Join Us Today
+                <a target="_blank" href="https://mdbootstrap.com/education/bootstrap/" class="btn btn-outline-white btn-lg">Join Us Today
                   <i class="fas fa-graduation-cap ml-2"></i>
                 </a>
               </div>
@@ -157,7 +155,7 @@
           <!--Grid column-->
           <div class="col-md-6 mb-4">
 
-            <img src="{% static 'img/goals.png'%}" class="img-fluid z-depth-1-half animated swing infinite delay-2s slower "
+            <img src="{% static 'goals.webp'%}" class="img-fluid z-depth-1-half animated swing infinite delay-2s slower "
               alt="">
 
           </div>
@@ -168,12 +166,12 @@
 
             <!-- Main heading -->
             <h3 class="h3 mb-3">Our Goals</h3>
-            <p>To create, grow and inspire the tech ethuthiasts from 
-                beginners to experts in offering technology solutions 
-                and turning their technology ideas into enterprenuership 
+            <p>To create, grow and inspire the tech ethuthiasts from
+                beginners to experts in offering technology solutions
+                and turning their technology ideas into enterprenuership
                 startups following the business model.</p>
             </p>
-            
+
             <!-- Main heading -->
 
             <hr>
@@ -187,10 +185,10 @@
         -->
 
             <!-- CTA -->
-            <a target="_blank" href="" class="btn btn-grey btn-md">Our Communities 
+            <a target="_blank" href="{% url 'community-list' %}" class="btn btn-grey btn-md">Our Communities
                 <i class="fas fa-american-sign-language-interpreting"></i>
             </a>
-            <a target="_blank" href="{% url 'community-list' %}" class="btn btn-grey btn-md">Our Products 
+            <a target="_blank" href="{% url 'community-list' %}" class="btn btn-grey btn-md">Our Products
                 <i class="fas fa-award"></i>
             </a>
 
@@ -207,7 +205,7 @@
 <!--Section: Main features-->
 <div class="row">
     <div class="col-sm">
-       
+
 <!-- Card Regular -->
 <div class="card card-cascade">
 
@@ -218,80 +216,74 @@
         <div class="mask rgba-white-slight"></div>
       </a>
     </div>
-  
+
     <!-- Card content -->
     <div class="card-body card-body-cascade text-center">
-  
+
       <!-- Title -->
       <h4 class="card-title"><strong>FREE TECHNICAL SUPPORT</strong></h4>
       <!-- Subtitle -->
       <h6 class="font-weight-bold indigo-text py-2"></h6>
       <!-- Text -->
-      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, ex, recusandae.
-        Facere modi sunt, quod quibusdam.
+      <p class="card-text">Computer clinic is a tech day hosted by innovation club were we do computer repairs free to all students.
       </p>
-  
+
       <!-- Facebook -->
       <a type="button" class="btn-floating btn-small btn-fb"><i class="fab fa-facebook-f"></i></a>
       <!-- Twitter -->
       <a type="button" class="btn-floating btn-small btn-tw"><i class="fab fa-twitter"></i></a>
       <!-- Google + -->
       <a type="button" class="btn-floating btn-small btn-dribbble"><i class="fab fa-dribbble"></i></a>
-  
+
     </div>
-  
+
     <!-- Card footer -->
-    <div class="card-footer text-muted text-center">
-      2 days ago
-    </div>
-  
+
+
   </div>
   <!-- Card Regular -->
     </div>
     <div class="col-sm">
-      
+
 <!-- Card Regular -->
 <div class="card card-cascade">
 
     <!-- Card image -->
     <div class="view view-cascade overlay">
-      <img class="card-img-top" src="{% static 'img/allcomrades.jpeg'%}" alt="Card image cap">
+      <img class="card-img-top" src="{% static 'images/all.jpg' %}" alt="Card image cap">
       <a>
         <div class="mask rgba-white-slight"></div>
       </a>
     </div>
-  
+
     <!-- Card content -->
     <div class="card-body card-body-cascade text-center">
-  
+
       <!-- Title -->
       <h4 class="card-title"><strong>SHOP AND SELL WITH ALLCOMARDES</strong></h4>
       <!-- Subtitle -->
       <h6 class="font-weight-bold indigo-text py-2"></h6>
       <!-- Text -->
-      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, ex, recusandae.
-        Facere modi sunt, quod quibusdam.
+      <p class="card-text">Allcomrades is a platform created by our ouwn team it allows you buy and sale items also get free meals at Ovo In.
       </p>
-  
+
+      <a type="button" href='https://www.allcomrades.co.ke' class="btn-floating btn-small btn-fb"><i class=""></i>Allcomrades.co.ke</a><br>
       <!-- Facebook -->
       <a type="button" class="btn-floating btn-small btn-fb"><i class="fab fa-facebook-f"></i></a>
       <!-- Twitter -->
       <a type="button" class="btn-floating btn-small btn-tw"><i class="fab fa-twitter"></i></a>
       <!-- Google + -->
       <a type="button" class="btn-floating btn-small btn-dribbble"><i class="fab fa-dribbble"></i></a>
-  
+
     </div>
-  
+
     <!-- Card footer -->
-    <div class="card-footer text-muted text-center">
-      2 days ago
-    </div>
-  
+
   </div>
   <!-- Card Regular -->
     </div>
     <div class="col-sm">
-      
+
 <!-- Card Regular -->
 <div class="card card-cascade">
 
@@ -302,33 +294,30 @@
         <div class="mask rgba-white-slight"></div>
       </a>
     </div>
-  
+
     <!-- Card content -->
     <div class="card-body card-body-cascade text-center">
-  
+
       <!-- Title -->
       <h4 class="card-title"><strong>PRACTICAL CODING SESSION</strong></h4>
       <!-- Subtitle -->
       <h6 class="font-weight-bold indigo-text py-2"></h6>
       <!-- Text -->
-      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, ex, recusandae.
-        Facere modi sunt, quod quibusdam.
+      <p class="card-text">C++ , python ,Java , Javascript ,Django ,Laravel, Php  made siple by live coding sessions.
       </p>
-  
+
       <!-- Facebook -->
       <a type="button" class="btn-floating btn-small btn-fb"><i class="fab fa-facebook-f"></i></a>
       <!-- Twitter -->
       <a type="button" class="btn-floating btn-small btn-tw"><i class="fab fa-twitter"></i></a>
       <!-- Google + -->
       <a type="button" class="btn-floating btn-small btn-dribbble"><i class="fab fa-dribbble"></i></a>
-  
+
     </div>
-  
+
     <!-- Card footer -->
-    <div class="card-footer text-muted text-center">
-      2 days ago
-    </div>
-  
+
+
   </div>
   <!-- Card Regular -->
     </div>
@@ -346,12 +335,12 @@
 
         <!-- Main heading -->
         <h3 class="h3 mb-3">Holding Technology Sessions</h3>
-        <p>The innovation Club holds technology sessions to teach it's 
+        <p>The innovation Club holds technology sessions to teach it's
             members and the entire technology enthuasts of Karatina University on
-             upcoming trends and features of technology like the 
+             upcoming trends and features of technology like the
             cloud computing for Development of IT solutions and use of cloud platforms.</p>
- 
-        
+
+
         <!-- Main heading -->
 
         <hr>
@@ -365,18 +354,18 @@
     -->
 
         <!-- CTA -->
-        <a target="_blank" href="#" class="btn btn-grey btn-md">Learn More
+        <a  href="{% url 'community-list' %}" class="btn btn-grey btn-md">Learn More
             <i class="fas fa-american-sign-language-interpreting"></i>
         </a>
-        
+
 
       </div>
       <!--Grid column-->
-      
+
       <!--Grid column-->
       <div class="col-md-6 mb-4">
 
-        <img src="{% static 'img/technicalses.jpg' %}" class="img-fluid z-depth-1-half"
+        <img src='{% static "images/techservice.jpg" %}' class="img-fluid z-depth-1-half"
           alt="">
 
       </div>
@@ -389,7 +378,144 @@
   <!--Section: Main info-->
 
 
+
+
+
+
+
+<!-- Grid row -->
+<div class="row">
+
+  <!-- Grid column -->
+  <div class="col-md-10 col-lg-9 col-xl-6 mb-r">
+     <h3>OUR CLUB LEADERS</h3>
+    <!--Panel-->
+
+
+    <div class="card card-body mb-3">
+
+      {% for chairperson in chairpersons %}
+        <h3>Dennis Kareithi - Chairman</h3>
+        <div class="media d-block d-md-flex">
+          <img class="d-flex avatar-2 mb-md-0 mb-3 mx-auto" src="https://mdbootstrap.com/img/Others/documentation/img (31)-mini.jpg"
+            alt="Generic placeholder image">
+          <div class="media-body text-center text-md-left ml-md-3 ml-0">
+            <p> Laravel , React ,UI/Ux expert . Hardworking and good collaborating guy he is self driven. Engineer research
+            He is the real tech man.</p>
+            <!-- Facebook -->
+        <a type="button" class="btn-floating btn-small btn-fb"><i class="fab fa-facebook-f"></i></a>
+        <!-- Twitter -->
+        <a type="button" class="btn-floating btn-small btn-tw"><i class="fab fa-twitter"></i></a>
+        <!-- Google + -->
+        <a type="button" class="btn-floating btn-small btn-dribbble"><i class="fab fa-dribbble"></i></a>
+          </div>
+        </div>
+      {% endfor %}
+
+    </div>
+    <!--/.Panel-->
+
+    <!--Panel-->
+
+    <div class="card card-body mb-3">
+        <h3>Jackson Muthomi- Vice Chairman</h3>
+      <div class="media d-block d-md-flex">
+        <div class="media-body pr-md-3 pr-0 text-center text-md-left">
+          <p> Django , Bootstrap ,React expert . Hardworking and good collaborating guy he is self driven. Engineer research
+          He is the real tech man.</p>
+           <!-- Facebook -->
+      <a type="button" class="btn-floating btn-small btn-fb"><i class="fab fa-facebook-f"></i></a>
+      <!-- Twitter -->
+      <a type="button" class="btn-floating btn-small btn-tw"><i class="fab fa-twitter"></i></a>
+      <!-- Google + -->
+      <a type="button" class="btn-floating btn-small btn-dribbble"><i class="fab fa-dribbble"></i></a>
+        </div>
+        <img class="d-flex mr-3 avatar-2 mt-md-0 mt-3 mx-auto" src="https://mdbootstrap.com/img/Others/documentation/img (27)-mini.jpg"
+          alt="Generic placeholder image">
+      </div>
+    </div>
+    <!--/.Panel-->
+
+    <!--Panel-->
+    <div class="card card-body">
+        <h3>Muchira Juniour - AI $ IoT team Leader</h3>
+      <div class="media d-block d-md-flex">
+        <img class="d-flex avatar-2 mb-md-0 mb-3 mx-auto" src="https://mdbootstrap.com/img/Others/documentation/img (28)-mini.jpg"
+          alt="Generic placeholder image">
+        <div class="media-body text-center text-md-left ml-md-3 ml-0">
+          <p> Iot , machine learning ,flask expert . Hardworking and good collaborating guy he is self driven. Engineer research
+          He is the real tech man.</p>
+        </div>
+      </div>
+    </div>
+    <!--/.Panel-->
+
+  </div>
+  <!-- Grid column -->
+
+  <!-- Grid column -->
+  <div class="col-md-10 col-lg-9 col-xl-6">
+
+    <!--Panel-->
+    <div class="card mb-3">
+
+    {% for patron in patrons %}
+
+      <h3 class="card-header indigo white-text text-uppercase text-center">Patrons</h3>
+      <div class="card-body">
+        <div class="media d-block d-md-flex mt-md-0 mt-4 mb-4">
+          <img class="d-flex mb-md-0 mb-3 avatar-2 rounded-circle z-depth-1 mx-auto" src="{{ patron.image_thumbnail.url }}"
+            alt="Generic placeholder image">
+          <div class="media-body ml-md-3 ml-0">
+              <h4>{{ patron.name.first_name }} {{ patron.name.last_name }}</h4>
+            <p align="justify">{{ patron.role }}
+            </p>
+            <div class="text-center text-md-left">
+               <!-- Facebook -->
+      <a type="button" class="btn-floating btn-small btn-fb"><i class="fab fa-facebook-f"></i></a>
+      <!-- Twitter -->
+      <a type="button" class="btn-floating btn-small btn-tw"><i class="fab fa-twitter"></i></a>
+      <!-- Google + -->
+      <a type="button" class="btn-floating btn-small btn-dribbble"><i class="fab fa-dribbble"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="media d-block d-md-flex">
+          <div class="media-body mr-md-3 mr-0">
+              <h4>{{ patron.name.first_name }} {{ patron.name.last_name }}</h4>
+            <p align="justify">{{ patron.role }}</p>
+            <div class="text-center text-md-left">
+               <!-- Facebook -->
+      <a type="button" class="btn-floating btn-small btn-fb"><i class="fab fa-facebook-f"></i></a>
+      <!-- Twitter -->
+      <a type="button" class="btn-floating btn-small btn-tw"><i class="fab fa-twitter"></i></a>
+      <!-- Google + -->
+      <a type="button" class="btn-floating btn-small btn-dribbble"><i class="fab fa-dribbble"></i></a>
+            </div>
+          </div>
+          <img class="d-flex mr-3 mb-md-0 mb-3 mt-md-0 mt-4 avatar-2 rounded-circle z-depth-1 mx-auto" src="{{ patron.image_thumbnail.url }}"
+            alt="Generic placeholder image">
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <!--/.Panel-->
+
+  </div>
+  <!-- Grid column -->
+
+</div>
+<!-- Grid row -->
+
+
+
+
+
+
+
+
      </div>
 <!--Main layout-->
-  
+
 {% endblock content %}
