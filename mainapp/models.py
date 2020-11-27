@@ -55,7 +55,7 @@ class Leader(models.Model):
     image_thumbnail = ImageSpecField(source = 'image',
                                     processors=[ResizeToFill(150,150)],
                                     format='JPEG',
-                                    options={'quality':100})
+                                    options={'quality':70})
     image_for_list = ImageSpecField(source = 'image',
                                     processors=[ResizeToFill(1000,1000)],
                                     format='JPEG',
