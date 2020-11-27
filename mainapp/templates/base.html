@@ -7,15 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   {% if title %}
-   
+
    <title>InnovationClub - {{title}}</title>
    {% else %}
    <title>InnovationClub</title>
   {% endif %}
-  
-  
-  
-  
+
+
+
+
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
   <!-- Bootstrap core CSS -->
@@ -24,6 +24,8 @@
   <link href="{% static 'css/mdb.min.css'%}" rel="stylesheet">
   <!-- Your custom styles (optional) -->
   <link href="{% static 'css/style.min.css'%}" rel="stylesheet">
+  <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="17dddc73-1bb2-4745-b4ce-9b1949504724";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+
   <style type="text/css">
     html,
     body,
@@ -66,14 +68,14 @@
 
 <!--mdb-color darken-3-->
     <!-- Navbar -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar  primary "  >
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar  elegant-color-dark "  >
       <div class="container">
         <!-- Brand -->
-        <a class="navbar-brand" href="{% url 'home-page' %}" target="_blank">
+        <a class="navbar-brand" href="{% url 'home-page' %}" >
         <!--https://res.cloudinary.com/mhmd/image/upload/v1557368579/logo_iqjuay.png-->
-          <img src="{% static 'img/logo.jpg'%}" width="45" alt="" class="d-inline-block align-middle mr-2 rounded">
+          <img src="{% static 'img/logo.jpg'%}" width="45" alt="" class="d-inline-block align-middle mr-2 rounded  animated flip infinite delay-2s slower">
       <!-- Logo Text -->
-          <strong>Innovation Club</strong>
+          <strong class="green-text">Innovation Club</strong>
         </a>
 
         <!-- Collapse -->
@@ -91,42 +93,75 @@
                 <span class="sr-only">(current)</span>
               </a>
             </li>
+
+
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'home-page' %}" target="_blank">About</a>
+              <a class="nav-link" href="{% url 'community-list' %}" >Comunities</a>
             </li>
+
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'contact-page' %}" target="_blank">Contact</a>
+              <a class="nav-link" href="{% url 'leaders-list' %}" >Leaders</a>
             </li>
+
+            <li class="nav-link">
+                <a type="button" class="white-text" data-toggle="modal" data-target="#modalLoginAvatarDemo">FeedBack
+                    </a>
+            </li>
+
+            <li class="nav-link">
+                    <a class="white-text" data-toggle="modal" data-target="#sideModalTLInfoDemo">NewEvent
+                    <span class="badge badge-primary badge-pill pull-right">1</span></a>
+            </li>
+
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'community-list' %}" target="_blank">Comunities</a>
+              <a class="nav-link" href="{% url 'home-page' %}" >About</a>
             </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'contact-page' %}" >Contact</a>
+            </li>
+
           </ul>
 
           <!-- Right -->
           <ul class="navbar-nav nav-flex-icons">
             <li class="nav-item">
-              <a href="" class="nav-link" target="_blank">
+              <a href="" class="nav-link" >
                 <i class="fab fa-facebook-f"></i>
               </a>
             </li>
             <li class="nav-item">
-              <a href="" class="nav-link" target="_blank">
+              <a href="" class="nav-link">
                 <i class="fab fa-twitter"></i>
               </a>
             </li>
             <li class="nav-item">
-              <a href="" class="nav-link" target="_blank">
+              <a href="" class="nav-link" >
                 <i class="fab fa-github mr-2"></i>
               </a>
             </li>
-            <li class="nav-item">
-              <a href="{% url "register" %}" class="nav-link border border-light rounded"
-                target="_blank">
-                <i class="fas fa-user-circle"></i></i>Account
 
-                
-              </a>
-            </li>
+            {% if request.user.is_authenticated %}
+
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'logout' %}" >Sign Out <i class="fas fa-sign-in-alt ml-1"></i>  </a>
+                </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#" >{{ request.user.username }}</a>
+              </li>
+
+            {% else %}
+
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'login' %}" >Sign In <i class="fas fa-sign-in-alt ml-1"></i>  </a>
+                </li>
+                <!--<li class="nav-item">-->
+                <!--  <a class="nav-link" href="{% url 'register' %}" >Sign Up <i class="fas fa-user-plus"></i></a>-->
+                <!--</li>-->
+
+            {% endif %}
+
           </ul>
 
         </div>
@@ -136,81 +171,236 @@
 
 
 
-    
+
+    <!-- Navbar -->
     <!-- Navbar -->
 
 
 
+
+              <!-- Side Modal Top Left Info-->
+              <div class="modal fade left" id="sideModalTLInfoDemo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                aria-hidden="true" data-backdrop="false">
+                <div class="modal-dialog modal-side modal-top-left modal-notify modal-info" role="document">
+                  <!--Content-->
+                  <div class="modal-content">
+                    <!--Header-->
+                    <div class="modal-header">
+                      <p class="heading lead">Wecome To Innovation Club First Meeting</p> <br>
+                      <p>Tue,Nov 16 2020</p>
+                      <!--
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="white-text">&times;</span>
+                      </button>
+                      -->
+                    </div>
+
+                    <!--Body-->
+                    <div class="modal-body">
+
+                      <img src="https://mdbootstrap.com/wp-content/uploads/2016/11/admin-dashboard-bootstrap.jpg" alt="Material Design for Bootstrap - dashboard"
+                        class="img-fluid">
+
+                      <div class="text-center">
+                        <p>🔰 innovation club🔰
+🌹hey there hope you are safe.We are glad to inform you that we shall be having our first  meeting of the semester tommorow 2pm🔥
+Venue COM LAB
+it's not a general meeting
+                        </p>
+                      </div>
+                    </div>
+
+                    <!--Footer-->
+
+                      <a role="button" class="btn btn-outline-info waves-effect" data-dismiss="modal">Yes,
+                        thanks</a>
+                    </div>
+                  </div>
+                  <!--/.Content-->
+                </div>
+              </div>
+              <!-- Side Modal Top Left Info-->
+
+
      <!--Main Layout-->
      {% block content %}
-    
+
      {% endblock content %}
 
+
+
+              <!--Modal Form Login with Avatar Demo-->
+              <div class="modal fade" id="modalLoginAvatarDemo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog cascading-modal modal-avatar modal-sm" role="document">
+                  <!--Content-->
+                  <div class="modal-content">
+
+                    <!--Header-->
+                    <div class="modal-header">
+                      <img src="{% static 'images/felo.jpg'%}" class="rounded-circle img-responsive"
+                        alt="Avatar photo">
+                    </div>
+                    <!--Body-->
+
+                    <form method="POST" enctype="multipart/form-data" action="{% url 'home-page' %}">
+                      {% csrf_token %}
+                    <div class="modal-body text-center mb-1">
+
+                      <h5 class="mt-1 mb-2">Developer Felix  likes to get your comments on any problems in the website <br> Site in test....</h5>
+
+                      <div class="md-form ml-0 mr-0">
+                        <input type="text" name="name" type="text" id="form1" class="form-control ml-0">
+                        <label for="form1" class="ml-0">Name </label>
+                      </div>
+
+                      <div class="md-form ml-0 mr-0">
+                        <input name="message" type="text" type="text" id="form1" class="form-control ml-0">
+                        <label for="form1" class="ml-0">Message </label>
+                      </div>
+
+                      <div class="text-center mt-4">
+                        <button type="submit" class="btn btn-cyan">Send
+                          <i class="fas fa-sign-in-alt ml-1"></i>
+                        </button>
+                        <a role="button" class="btn btn-outline-danger waves-effect" data-dismiss="modal">Cancel</a>
+                      </div>
+                    </div>
+                    </form>
+                  </div>
+                  <!--/.Content-->
+                </div>
+              </div>
+              <!--Modal Form Login with Avatar Demo-->
+
+
      <!--Main Layout-->
-     
-      <!--Footer-->
-  <footer class="page-footer text-center font-small mt-4 wow fadeIn  primary darcken-5">
+<!-- Footer -->
+<footer class="page-footer font-small  elegant-color-dark">
 
-    <!--Call to action-->
-    <div class="pt-4">
-      <a class="btn btn-outline-white" href="" target="_blank"
-        role="button">InnovationClub
-        <i class="fas fa-download ml-2"></i>
-      </a>
-      <a class="btn btn-outline-white" href="" target="_blank" role="button">Start
-        Site In Development
-        <i class="fas fa-graduation-cap ml-2"></i>
-      </a>
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
+
+        <!-- Content -->
+        <h5 class="font-weight-bold text-uppercase mb-4">Innovation Club</h5>
+        <p>A group of students come together bulild up there skills at Karatina university.</p>
+        <p>We help students who come up with ideas and dont have ways to impliment.</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+        <!-- Links -->
+        <h5 class="font-weight-bold text-uppercase mb-4">About</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <p>
+              <a href="#!">PROJECTS</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href="#!">ABOUT US</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href="#!">BLOG</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href="#!">AWARDS</a>
+            </p>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+        <!-- Contact details -->
+        <h5 class="font-weight-bold text-uppercase mb-4">Address</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <p>
+              <i class="fas fa-home mr-3"></i> Karatina, Karatina University, Kenya</p>
+          </li>
+          <li>
+            <p>
+              <i class="fas fa-envelope mr-3"></i> innivationclub77@gmail.com</p>
+          </li>
+          <li>
+            <p>
+              <i class="fas fa-phone mr-3"></i> +254717713943</p>
+          </li>
+          <li>
+            <p>
+              <i class="fas fa-print mr-3"></i> +254717713943</p>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
+
+        <!-- Social buttons -->
+        <h5 class="font-weight-bold text-uppercase mb-4">Follow Us</h5>
+
+        <!-- Facebook -->
+        <a type="button" class="btn-floating btn-fb">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <!-- Twitter -->
+        <a type="button" class="btn-floating btn-tw">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <!-- Google +-->
+        <a type="button" class="btn-floating btn-gplus">
+          <i class="fab fa-google-plus-g"></i>
+        </a>
+        <!-- Dribbble -->
+        <a type="button" class="btn-floating btn-dribbble">
+          <i class="fab fa-dribbble"></i>
+        </a>
+
+      </div>
+      <!-- Grid column -->
+
     </div>
-    <!--/.Call to action-->
+    <!-- Grid row -->
 
-    <hr class="my-4">
+  </div>
+  <!-- Footer Links -->
 
-    <!-- Social icons -->
-    <div class="pb-4">
-      <a href="https://www.facebook.com/mdbootstrap" target="_blank">
-        <i class="fab fa-facebook-f mr-3"></i>
-      </a>
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href=""> Karu Innovation Club</a>
+  </div>
+  <!-- Copyright -->
 
-      <a href="https://twitter.com/MDBootstrap" target="_blank">
-        <i class="fab fa-twitter mr-3"></i>
-      </a>
-
-      <a href="https://www.youtube.com/watch?v=7MUISDJ5ZZ4" target="_blank">
-        <i class="fab fa-youtube mr-3"></i>
-      </a>
-
-      <a href="https://plus.google.com/u/0/b/107863090883699620484" target="_blank">
-        <i class="fab fa-google-plus-g mr-3"></i>
-      </a>
-
-      <a href="https://dribbble.com/mdbootstrap" target="_blank">
-        <i class="fab fa-dribbble mr-3"></i>
-      </a>
-
-      <a href="https://pinterest.com/mdbootstrap" target="_blank">
-        <i class="fab fa-pinterest mr-3"></i>
-      </a>
-
-      <a href="https://github.com/mdbootstrap/bootstrap-material-design" target="_blank">
-        <i class="fab fa-github mr-3"></i>
-      </a>
-
-      <a href="http://codepen.io/mdbootstrap/" target="_blank">
-        <i class="fab fa-codepen mr-3"></i>
-      </a>
-    </div>
-    <!-- Social icons -->
-
-    <!--Copyright-->
-    <div class="footer-copyright py-3">
-      © 2020 Karu Copyright:
-      <a href="" target="_blank"> Developer-Felix </a>
-    </div>
-    <!--/.Copyright-->
-
-  </footer>
-  <!--/.Footer-->
+</footer>
+<!-- Footer -->
 
   <!-- SCRIPTS -->
   <!-- JQuery -->

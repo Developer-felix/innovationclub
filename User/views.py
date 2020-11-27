@@ -14,20 +14,20 @@ from django.shortcuts import redirect
 
 def register(request):
     if request.method == "POST":
-        
+
         first_name = request.POST['first_name']
         last_name = request.POST['last_name']
         username = request.POST['username']
         email = request.POST['email']
         password1 = request.POST['password1']
         password2 = request.POST['password2']
-    
+
         user=User.objects.create_user(first_name=first_name,last_name=last_name,email=email,username=username,password=password1)
         user.save()
-        
+
         return redirect('login')
     else:
-        return render(request,'users/register.html') 
+        return render(request,'users/register.html')
 
 """
 def register(request):
@@ -47,7 +47,7 @@ def profile(request):
     if request.method == 'POST':
         u_form = UserUpdateForm(request.POST,instance=request.user)
         p_form = ProfileUpdateForm(request.POST,
-                                   request.FILES, 
+                                   request.FILES,
                                    instance=request.user.profile)
         if u_form.is_valid() and p_form.is_valid():
             u_form.save()
