@@ -20,19 +20,21 @@ body,
     height: 100%; } }
 
 /* Navbar animation */
-/* */
+/*rgba(248, 248, 248, 0.2) */
 .navbar {
-  background-color: rgba(248, 248, 248, 0.2);
+  background-color: #1C2331 ;
   }
 
 
 .top-nav-collapse {
   background-color:#929FBA; }
 
-/* Adding color to the Navbar on mobile */
+/*" Adding color to the Navbar on mobile #c5d5f7 */
 @media only screen and (max-width: 768px) {
   .navbar {
-    background-color: #929FBA; } }
+    background-color: #1C2331 ;
+  
+  } }
 
 /* Footer color for sake of consistency with Navbar */
 .page-footer {

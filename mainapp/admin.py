@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from django.contrib import admin
 from .models import Community,Leader,Project, Feedback, Community_Event
 
@@ -6,3 +7,13 @@ admin.site.register(Leader)
 admin.site.register(Project)
 admin.site.register(Feedback)
 admin.site.register(Community_Event)
+=======
+from django.contrib import admin
+from .models import Community,Leader,Project,Feedback, Community_Event
+
+admin.site.register(Community)
+admin.site.register(Leader)
+admin.site.register(Project)
+admin.site.register(Feedback)
+admin.site.register(Community_Event)
+>>>>>>> 62f240d3c46a6af1f386a4008cf2a2700675bf03
